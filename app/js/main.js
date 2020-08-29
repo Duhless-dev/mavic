@@ -42,5 +42,5 @@ $(() => {
 		navigationTooltips: ['Главная', 'О Дроне', 'Преимущества', 'Характеристики', 'Вопросы', 'Контакты'],
 		parallax: true
 	});
-	//$.fn.fullpage.setAllowScrolling(false);
+
 });
