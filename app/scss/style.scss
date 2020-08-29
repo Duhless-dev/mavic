@@ -1,0 +1,462 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+@import"animation";
+
+//!================================HEADER============================
+.header__inner{
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	z-index: 5;
+	max-width: 1240px;
+	width: 100%;
+	top: 30px;
+	min-height: 30px;
+	align-items: center;
+}
+.menu{
+	li{
+		position: relative;
+		display: inline-block;
+		
+		&::before{
+			position: absolute;
+			content: '';
+			height: 2px;
+			background-color: #ffffff;
+			bottom: -5px;
+			width: 0px;
+			right: 0;
+			transition: all .3s;
+		}
+		&:hover{
+			&::before{			
+				width: 100%;
+				left: 0px;
+			}
+			
+		}
+		+li{
+			margin-left: 20px;
+		}
+		a{
+			@include ubuntu-medium;
+			font-size: 15px;
+			color: #ffffff;
+		}
+	}
+}
+.header-info{
+	a{
+		margin-left: 8px;
+		color: #ffffff;
+		font-size: 16px;
+		@include ubuntu-bold;
+	}
+}
+//!================================ END HEADER============================
+//!================================ MAVIC-SECTION============================
+	.mavic__inner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.mavic__title{
+		font-size: 96px;
+		line-height: 115px;
+		color: #ffffff;
+		@include sfp-semibold;
+		margin-bottom: 40px;
+	}
+	.mavic__text{
+		@include ubuntu-light;
+		font-size: 17px;
+		text-align: center;
+		color: #ffffff;
+		max-width: 330px;
+		margin-top: 80px;
+		line-height: 27px;
+	}
+	.mavic-social{
+		max-width: 225px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 80px;
+	}
+	.mavic{
+		.page-section__wrapper{
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+//!================================ END MAVIC-SECTION=========================
+//!================================ MAVIC-info-SECTION=========================
+.mavic-info{
+	&__inner{
+		margin-top: 55px;
+		display: flex;
+	}
+	&__about{
+		margin-left: 30px;
+		p+p{
+			margin-top: 30px;
+		}
+		max-width: 401px;
+		width: 100%;
+		line-height: 150%;
+		margin-right: 30px;
+	}
+	&__title{
+		@include ubuntu-medium;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: right;
+		color: #ffffff;
+		max-width: 281px;
+		position: absolute;
+		bottom: 30px;
+		left: -45%;
+		z-index: 2;
+	}
+	&__content{
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		padding-right: 46px;
+	}&__wrapper{
+		position: absolute;
+		bottom: 100px;
+	}
+	&__slider{
+		max-width: 560px;
+		width: 100%;
+	}
+}
+//!================================ END MAVIC-info-SECTION=========================
+//!================================ BENEFITS-SECTION=========================
+	.benefits{
+		&__inner{
+			margin-top: 100px;
+			padding-left: 30px;
+			ol{
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+		&__item{
+			max-width: 50%;
+			width: 100%;
+			display: flex;
+			margin-bottom: 103px;
+			position: relative;
+				&::after{
+					position: absolute;
+					content: '';
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+			img{
+				position: relative;
+				z-index: 2;
+			}
+			&--2{
+				transform: translateY(20px);
+				&::after{
+					height: 47px;
+					width: 245px;
+					top: 12px;
+					left: -260px;
+					background-image: url(../img/way1.svg);
+				}
+			}
+			&--3{
+				transform: translateX(30px);
+				.benefits__item-info{
+					max-width: 240px;
+				}
+				&::after{
+					height: 63px;
+					width: 465px;
+					top: -82px;
+					left: 100px;
+					background-image: url(../img/way2.svg);
+				}
+			}
+			&--4{
+				transform: translateY(20px);
+				transform: translateX(30px);
+				&::after{
+					height: 40px;
+					width: 254px;
+					top: 20px;
+					left: -260px;
+					background-image: url(../img/way3.svg);
+				}
+			}
+			&-info{
+				margin-left: 35px;
+			}
+			&-text{
+				max-width: 300px;
+				line-height: 130%;
+				margin-top: 12px;
+			}
+		}
+	}
+//!================================ END BENEFITS-SECTION=========================
+//!================================ OPTION-SECTION=========================
+	.option{
+		&__inner{
+			margin-top: 150px;
+			display: flex;
+			min-height: 400px;
+			justify-content: space-between;
+			padding-left: 30px;
+		}
+		&__item{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			max-width: 280px;
+			width: 100%;
+		}
+		&__item-center{
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			margin-right: -5px;
+			margin-left: -30px;
+		}
+	}
+	.option__box-1{
+		&::before{
+			top: 12px;
+			right: -120px;
+			height: 111px;
+			width: 221px;
+			background-image: url(../img/line1.svg);
+		}
+	}
+	.option__box-2{
+		max-width: 253px;
+		&::before{
+			top: -65px;
+			right: -320px;
+			height: 80px;
+			width: 340px;
+			background-image: url(../img/line3.svg);
+		}
+	}
+	
+	.option__box-3{
+			&::before{
+			top: 12px;
+			left: -280px;
+			height: 100px;
+			width: 250px;
+			background-image: url(../img/line2.svg);
+		}
+		
+	}
+	.option__box-4{
+		&::before{
+			top: -77px;
+			left: -133px;
+			height: 117px;
+			width: 125px;
+			background-image: url(../img/line4.svg);
+		}
+	}
+	.option__box-text{
+		margin-top: 10px;
+		line-height: 130%;
+	}
+	.option__box{
+		position: relative;
+		&::before{
+			position: absolute;
+			content: '';
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+//!================================ END OPTION-SECTION=========================
+//!================================ QUASTION-SECTION=========================
+.quastion{
+	.arrow-down{
+		text-align: center;
+	}
+	.uni-title{
+		padding-left: 30px;
+	}
+	&__inner{
+		padding-left: 30px;
+		margin-top: 80px;
+	}
+	&__item{
+		max-width: 690px;
+		position: relative;
+		padding-left: 40px;
+		background: rgba(0, 0, 0, 0.3);
+		img{
+			position: absolute;
+			top: -27px;
+			right: -387px;
+		}
+		&+.quastion__item{
+			margin-top: 5px;
+		}
+		
+		&-title{
+			line-height: 72px;
+			position: relative;
+			cursor: pointer;
+			&::before{
+				position: absolute;
+				content: url(../img/arrow-quastion.svg);
+				height: 72px;
+				width: 67px;
+				background-color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				top: 0px;
+				right: -67px;;
+			}
+		}
+		&-text{
+			padding-right: 5px;
+			padding-bottom: 75px;
+			display: none;
+		}
+	}
+}
+//!================================ END QUASTION-SECTION=========================
+//!================================ CONTACTS-SECTION=========================
+.contacts{
+	.uni-title{
+		padding-left: 30px;
+	}
+	&__inner{
+		margin-top: 100px;
+		padding-left: 60px;
+		display: flex;
+	}
+	&__info{
+		max-width: 360px;
+		width: 100%;
+	}
+	&__form{
+		margin-right: 106px;
+		max-width: 570px;
+		width: 100%;
+	}
+	&__box{
+		max-width: 240px;
+		margin-bottom: 30px;
+		&-title{
+			margin-bottom: 10px;
+		}
+		a{
+			position: relative;
+			font-size: 15px;
+			color: #fff;
+			line-height: 130%;
+			@include ubuntu-light;
+			&+a{
+				margin-top: 3px;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				height: 2px;
+				background-color: #ffffff;
+				bottom: -5px;
+				width: 0px;
+				right: 0;
+				transition: all .3s;
+			}
+			&:hover{
+				&::before{			
+					width: 100%;
+					left: 0px;
+				}
+			}
+		}
+		
+	}
+}
+.contacts__form{
+	&-title{
+		margin-bottom: 10px;
+	}
+	&-text{
+		margin-bottom: 12px;
+	}
+	.form-input{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	input{
+		max-width: 49%;
+		width: 100%;
+		height: 46px;
+		background: rgba(0, 0, 0, 0.5);
+		padding-left: 15px;
+		padding-right: 15px;
+		border: none;
+
+		&::placeholder{
+			font-size: 13px;
+			line-height: 130%;
+			color: #fff;
+			@include ubuntu-light;
+			opacity: 0.4;
+		}
+	}
+	textarea{
+		width: 100%;
+		height: 144px;
+		padding: 15px;
+		resize: none;
+		background: rgba(0, 0, 0, 0.5);
+		border: none;
+		margin-bottom: 20px;
+		&::placeholder{
+			font-size: 13px;
+			line-height: 130%;
+			color: #fff;
+			@include ubuntu-light;
+			opacity: 0.4;
+		}
+	}
+}
+.contacts__social{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	a+a{
+		margin-top: 30px;
+	}
+}
+//!================================ END CONTACTS-SECTION=========================
+
+.footer{
+	position: absolute;
+	bottom: 32px;
+	max-width: 1240px;
+	width: 100%;
+	p{
+		opacity: 0.64;
+		text-align: right;
+	}
+}
+
+@import "media";
